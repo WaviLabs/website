@@ -1,6 +1,8 @@
-/* body {
-    background-color: #48b5e0;
-} */
+#sb-background {
+    background-image: url("/ocean-water.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .navbar {
     height: 100px;
@@ -12,4 +14,8 @@
 
 .button.is-primary {
     background-color: #48b5e0;
+}
+
+.hero-body {
+    color: white;
 }
