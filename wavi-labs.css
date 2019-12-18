@@ -1,11 +1,19 @@
 #sb-background {
-    background-image: url("/ocean-water.jpg");
+    /* background-image: url("/ocean-water.jpg"); */
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.4)), url("/ocean-water.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.navbar {
-    height: 100px;
+#nav {
+    height: 90px;
+    background: none;
+    transition: all .5s ease-in-out;
+}
+
+.scrolled {
+    background-color: #fff !important;
+    transition: all .5s ease-in-out;
 }
 
 .navbar-item img {
@@ -14,8 +22,4 @@
 
 .button.is-primary {
     background-color: #48b5e0;
-}
-
-.hero-body {
-    color: white;
 }
