@@ -1,6 +1,6 @@
 #sb-background {
     /* background-image: url("/ocean-water.jpg"); */
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.4)), url("/ocean-water.jpg");
+    background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.8)), url("/ocean-water.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -14,6 +14,9 @@
 .scrolled {
     background-color: #fff !important;
     transition: all .5s ease-in-out;
+	-webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+	box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 }
 
 .navbar-item img {
