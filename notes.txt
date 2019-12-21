@@ -1,1 +1,5 @@
 Add calendar that shows the days we are available.
+
+Add hover animation to navbar items
+
+add columns to footer

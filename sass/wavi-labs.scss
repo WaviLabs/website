@@ -1,10 +1,26 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+$primary: #48b5e0;
+// $navbar-height: 3rem;
+$navbar-item-img-max-height: 3rem;
+// $light: #71eeb8;
+$family-sans-serif: 'Nunito', sans-serif;
+// $body-background-color: $primary;
+
 @import "../node_modules/bulma/bulma.sass";
+
+body {
+    font-size: 1.25rem;
+}
+
+.navbar-dropdown {
+    font-size: 1rem;
+}
 
 .navbar {
     background: none;
     transition: all .5s ease-in-out;
-    min-height: 5rem;
     padding-top: 1rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
@@ -17,10 +33,6 @@
 	-webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 	-moz-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 	box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
-}
-
-.navbar-item img {
-    max-height: 3rem;
 }
 
 .carousel-item > div {
