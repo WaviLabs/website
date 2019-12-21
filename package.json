@@ -1,0 +1,26 @@
+{
+  "name": "wavi-labs-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sass/mystyles.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url sass/wavi-labs.scss css/wavi-labs.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavi-labs/website.git"
+  },
+  "author": "Rashad Gover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wavi-labs/website/issues"
+  },
+  "homepage": "https://github.com/wavi-labs/website#readme",
+  "devDependencies": {
+    "bulma": "^0.8.0",
+    "node-sass": "^4.13.0"
+  }
+}
