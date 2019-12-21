@@ -18,6 +18,23 @@ body {
     font-size: 1rem;
 }
 
+a.animate-hover:after, a.animate-hover:visited:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #069;
+    transition: 0.2s;
+  }
+
+a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
+    width: 100%;
+}
+
+// CSS above this line can be optimized.
+
 .navbar {
     background: none;
     transition: all .5s ease-in-out;
