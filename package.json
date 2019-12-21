@@ -5,7 +5,7 @@
   "main": "sass/mystyles.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css-build": "node-sass --omit-source-map-url sass/wavi-labs.scss css/wavi-labs.css",
+    "css-build": "node-sass --omit-source-map-url sass/wavi-labs.scss docs/css/wavi-labs.css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch"
   },
