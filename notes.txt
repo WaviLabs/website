@@ -1,5 +1,5 @@
 Add calendar that shows the days we are available.
 
-Add hover animation to navbar items
+add read more to the bottom of each section like technology and process
 
-add columns to footer
+Use sections only as direct children of body tag.

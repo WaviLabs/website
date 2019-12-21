@@ -7121,6 +7121,12 @@ a.animate-hover:after, a.animate-hover:visited:after {
 a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
   width: 100%; }
 
+@media (max-width: 769px) {
+  /* <== You can change this break point as per your needs */
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex; } }
+
 .navbar {
   background: none;
   transition: all .5s ease-in-out;

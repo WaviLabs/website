@@ -35,6 +35,13 @@ a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
 
 // CSS above this line can be optimized.
 
+@media(max-width: $tablet) { /* <== You can change this break point as per your needs */
+    .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+}
+
 .navbar {
     background: none;
     transition: all .5s ease-in-out;
