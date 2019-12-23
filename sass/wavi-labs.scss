@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 $primary: #48b5e0;
+$secondary: #71eeb8;
 // $navbar-height: 3rem;
 $navbar-item-img-max-height: 3rem;
 // $light: #71eeb8;
@@ -25,12 +26,16 @@ a.animate-hover:after, a.animate-hover:visited:after {
     bottom: 0;
     left: 0;
     width: 0%;
-    background: #069;
+    background: $primary;
     transition: 0.2s;
   }
 
 a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
     width: 100%;
+}
+
+.title {
+    color: $primary;
 }
 
 // CSS above this line can be optimized.
@@ -40,6 +45,10 @@ a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
         flex-direction: column-reverse;
         display: flex;
     }
+}
+
+p {
+    color: $dark;
 }
 
 .navbar {
@@ -58,6 +67,56 @@ a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
 	-moz-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 	box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 }
+
+.hero-body {
+    background-image: url("/docs/ocean-water.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+.hvr-icon-forward {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    border: none;
+  }
+  .hvr-icon-forward .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border: none;
+  }
+  .hvr-icon-forward:hover .hvr-icon, .hvr-icon-forward:focus .hvr-icon, .hvr-icon-forward:active .hvr-icon {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+    color: $secondary;
+  }
 
 .carousel-item > div {
     height: 400px;

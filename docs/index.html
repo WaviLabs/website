@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="index.html">
@@ -46,15 +46,25 @@
       </div>
     </nav>
 
-    <section class="hero is-large is-light">
+    <!-- The logo is to close to the container when is sideways mobile mode -->
+
+    <section class="hero is-fullheight">
       <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="is-size-4">
-            Wavi Labs is a <strong>general software development</strong> company that aims to <strong>revolutionize</strong> the way humans <strong>build</strong> and <strong>use</strong> software.
-          </p>
-          <a href="#" class="button is-primary is-rounded is-large">
-            Work With Us
-          </a>
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+            </div>
+            <div class="column is-10">
+              <div class="box">
+                <section class="section has-text-centered">
+                  <h2 class="subtitle">Wavi Labs tries to make the world a better place by changing the way humans build and use software.</h2>
+                  <a class="button is-primary is-rounded is-medium hvr-grow" href="#">Work With Us</a>
+                </section>
+              </div>
+            </div>
+            <div class="column">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -62,17 +72,18 @@
     <br>
 
     <div class="container">
-      <div class="columns">
+      <div class="columns is-vcentered reverse-columns">
         <div class="column is-half">
-          <section class="section">
-            <div class="container">
+            <div class="box">
               <h1 class="title">Bio</h1>
               <p>
                 Wavi Labs was founded in 2019 by software engineers and researchers that saw the lack of well-designed software in the world.
-                Wavi Labs is our attempt to fix the world's...
+                Wavi Labs is our attempt to fix the world's. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatum quo magnam explicabo
+                repudiandae ullam quibusdam incidunt illum impedit numquam, fuga facilis exercitationem quaerat dolores nobis repellat laborum
+                assumenda ipsum earum? Quia vel qui dolore ratione dolorum tempora consequuntur, nostrum debitis sunt sapiente magnam temporibus
+                unde velit rem perspiciatis eaque voluptatem aperiam perferendis fuga? Laborum obcaecati facilis labore sint sequi?
               </p>
             </div>
-          </section>
         </div>
         <div class="column">
           <img src="sb-background-2.jpg">
@@ -81,7 +92,7 @@
     </div>
 
     <div class="container">
-      <div class="columns reverse-columns">
+      <div class="columns"> <!-- If vcentered is used the carousel isn't responsive -->
         <div class="column is-half">
           <div class="container">
             <div class="carousel">
@@ -115,96 +126,69 @@
           </div>
         </div>
         <div class="column">
-          <section class="section">
-            <div class="container">
+          <div class="box">
               <h1 class="title">Portfolio</h1>
               <p>
-                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+                Wavi Labs was founded in 2019 by software engineers and researchers that saw the lack of well-designed software in the world.
+                Wavi Labs is our attempt to fix the world's. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatum quo magnam explicabo
+                repudiandae ullam quibusdam incidunt illum impedit numquam, fuga facilis exercitationem quaerat dolores nobis repellat laborum
+                assumenda ipsum earum? Quia vel qui dolore ratione dolorum tempora consequuntur, nostrum debitis sunt sapiente magnam temporibus
+                unde velit rem perspiciatis eaque voluptatem aperiam perferendis fuga? Laborum obcaecati facilis labore sint sequi?
               </p>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
+            <div class="level">
+              <div class="level-left">
 
-    <div class="container">
-      <div class="columns">
-        <div class="column is-half">
-          <section class="section">
-            <div class="container">
-              <h1 class="title">Process</h1>
-              <p>
-                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-              </p>
-            </div>
-          </section>
-        </div>
-        <div class="column">
-          <img src="ocean-water.jpg">
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="columns reverse-columns">
-        <div class="column is-half">
-          <!-- Content here!! -->
-          <div class="tile is-ancestor is-vertical is-12">
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-                <p class="title">Haskell</p>
-                <p class="subtitle">With an image</p>
-              </article>
-              <article class="tile is-child box">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-                <p class="title">Purescript</p>
-                <p class="subtitle">With an image</p>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-                <p class="title">Elixir</p>
-                <p class="subtitle">With an image</p>
-              </article>
-              <article class="tile is-child box">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-                <p class="subtitle">Datalog</p>
-                <p>With an image</p>
-              </article>
+              </div>
+              <div class="level-right">
+                <a href="#" class="button hvr-icon-forward is-medium">
+                  See More
+                  <i class="fas fa-chevron-right hvr-icon"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <!-- Content Ends Here!! -->
-        </div>
-        <div class="column">
-          <section class="section">
-            <div class="container">
-              <h1 class="title">Technology</h1>
-              <p>
-                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-              </p>
-            </div>
-          </section>
         </div>
       </div>
     </div>
 
-    <section class="section">
-      <div class="container has-text-centered">
-        <h1 class="title">FAQ</h1>
-        <p>
-          A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-        </p>
+    <div class="container">
+      <div class="columns is-vcentered reverse-columns">
+        <div class="column is-half">
+          <div class="box">
+            <h1 class="title">Process</h1>
+            <p>
+              Wavi Labs was founded in 2019 by software engineers and researchers that saw the lack of well-designed software in the world.
+              Wavi Labs is our attempt to fix the world's. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatum quo magnam explicabo
+              repudiandae ullam quibusdam incidunt illum impedit numquam, fuga facilis exercitationem quaerat dolores nobis repellat laborum
+              assumenda ipsum earum? Quia vel qui dolore ratione dolorum tempora consequuntur, nostrum debitis sunt sapiente magnam temporibus
+              unde velit rem perspiciatis eaque voluptatem aperiam perferendis fuga? Laborum obcaecati facilis labore sint sequi?
+            </p>
+            <div class="level">
+              <div class="level-left">
+
+              </div>
+              <div class="level-right">
+                <a href="#" class="button hvr-icon-forward is-medium">
+                  Learn More
+                  <i class="fas fa-chevron-right hvr-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <img src="sb-background-2.jpg">
+        </div>
       </div>
+    </div>
+
+    <br>
+
+    <section class="section has-text-centered">
+      <h1 class="title">Technology</h1>
+      <p>
+        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+      </p>
     </section>
 
     <footer class="footer">
@@ -248,12 +232,7 @@
             <h2 class="subtitle"><strong>Services</strong></h2>
             <p>
               <a href="#">
-                Custom Application Development
-              </a>
-            </p>
-            <p>
-              <a href="#">
-                Native Applications
+                Custom App Development
               </a>
             </p>
             <p>
@@ -271,6 +250,11 @@
                 Formal Verification
               </a>
             </p>
+            <p>
+              <a href="#">
+                Staff Augmentation
+              </a>
+            </p>
           </div>
         </div>
 
@@ -284,7 +268,7 @@
             </p>
             <p>
               <a href="#">
-                Elm
+                Idris
               </a>
             </p>
             <p>
@@ -294,6 +278,11 @@
             </p>
               <a href="#">
                 Purescript
+              </a>
+            </p>
+            </p>
+              <a href="#">
+                Rust
               </a>
             </p>
           </div>
