@@ -15,6 +15,13 @@ body {
     font-size: 1.25rem;
 }
 
+.underlined {
+    text-decoration: none;
+    border-bottom: 4px solid $primary;
+    padding-bottom: 4px;
+    display: inline-block
+}
+
 .navbar-dropdown {
     font-size: 1rem;
 }
