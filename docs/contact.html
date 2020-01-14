@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wavi Labs</title>
+    <link rel="stylesheet" href="css/wavi-labs.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/a5fd11fb22.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="new-logo.svg.png" alt="Wavi Labs logo">
+          </a>
+
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="index.html" class="navbar-item animate-hover">
+              About
+            </a>
+
+            <a href="services.html" class="navbar-item animate-hover">
+              Services
+            </a>
+
+            <a href="blog.html" class="navbar-item animate-hover">
+              Blog
+            </a>
+
+            <a href="team.html" class="navbar-item animate-hover">
+              Team
+            </a>
+
+            <a href="contact.html" class="navbar-item animate-hover">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- The logo is to close to the container when is sideways mobile mode -->
+    <div class="container">
+        <section class="section has-text-centered">
+            <h1 class="title underlined">Contact Information</h1>
+            <ul>
+                <li>Name: Wavi Labs LLC</li>
+                <li>Location: Silicon Beach, CA</li>
+                <li>Email: wavi.labs@gmail.com</li>
+                <li>Phone: (310) 910-3199</li>
+                <li>Website: www.wavi-labs.com</li>
+            </ul>
+            <!-- TODO: Add buttons for Twitter, Instagram, GitHub links. -->
+        </section>
+    </div>
+
+    <br>
+
+    <footer class="footer">
+      <div class="columns">
+
+        <div class="column is-one-fifths">
+          <div class="container has-text-centered">
+            <a href="#">
+              <img src="g915.png" alt="Wavi Labs logo">
+            </a>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="container has-text-centered">
+            <h2 class="subtitle"><strong><u>About</u></strong></h2>
+            <p>
+              <a href="#">
+                Why Wavi Labs?
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Process
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Portfolio
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Culture
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="container has-text-centered">
+            <h2 class="subtitle"><strong><u>Services</u></strong></h2>
+            <p>
+              <a href="#">
+                Custom App Development
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Software Robotics
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Compilers/DSLs
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Formal Verification
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Staff Augmentation
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="container has-text-centered">
+            <h2 class="subtitle"><strong><u>Technology</u></strong></h2>
+            <p>
+              <a href="#">
+                Haskell
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Idris
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Elixir
+              </a>
+            </p>
+              <a href="#">
+                Purescript
+              </a>
+            </p>
+            </p>
+              <a href="#">
+                Rust
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="container has-text-centered">
+            <h2 class="subtitle"><strong><u>Contact</u></strong></h2>
+            <p>
+              <a href="#">
+                Newsletter
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Twitter
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                Instagram
+              </a>
+            </p>
+            <a href="#">
+                Github
+            </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content has-text-centered">
+        <p>
+          This website was built by <a href="#">Wavi Labs</a> using <strong>HTML, CSS, Bulma, Lucid, Pandoc, and TypeScript</strong>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>. ocean-wave.jpg credit to <a href="https://www.pexels.com/photo/ocean-water-wave-photo-1295138/" alt="
+          Photo by Emiliano Arano from Pexels
+          ">Emiliano Arano</a>
+        </p>
+      </div>
+    </footer>
+
+  </body>
+
+  <script>
+    window.onscroll = () => {
+      const nav = document.querySelector(".navbar");
+      if (this.scrollY <= 10) nav.className = "navbar is-transparent is-fixed-top";
+      else nav.className = "navbar is-transparent is-fixed-top scrolled";
+    };
+
+    var carousel = document.querySelector('.carousel');
+    var container = carousel.querySelector('.carousel-container');
+    var prevBtn = carousel.querySelector('.carousel-prev');
+    var nextBtn = carousel.querySelector('.carousel-next');
+    var pagination = carousel.querySelector('.carousel-pagination');
+    var bullets = [].slice.call(carousel.querySelectorAll('.carousel-bullet'));
+    var totalItems = container.querySelectorAll('.carousel-item').length;
+    var percent = (100 / totalItems);
+    var currentIndex = 0;
+
+    function next() {
+        slideTo(currentIndex + 1);
+    }
+
+    function prev() {
+        slideTo(currentIndex - 1);
+    }
+
+    function slideTo(index) {
+        index = index < 0 ? totalItems - 1 : index >= totalItems ? 0 : index;
+        container.style.WebkitTransform = container.style.transform = 'translate(-' + (index * percent) + '%, 0)';
+        bullets[currentIndex].classList.remove('active-bullet');
+        bullets[index].classList.add('active-bullet');
+        currentIndex = index;
+    }
+
+    bullets[currentIndex].classList.add('active-bullet');
+    prevBtn.addEventListener('click', prev, false);
+    nextBtn.addEventListener('click', next, false);
+
+    pagination.addEventListener('click', function(e) {
+        var index = bullets.indexOf(e.target);
+        if (index !== -1 && index !== currentIndex) {
+            slideTo(index);
+        }
+    }, false);
+  </script>
+
+</html>
