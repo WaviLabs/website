@@ -53,20 +53,87 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
 
-    <!-- The logo is to close to the container when is sideways mobile mode -->
     <div class="container">
-        <section class="section has-text-centered">
-            <h1 class="title underlined">Contact Information</h1>
-            <ul>
-                <li>Name: Wavi Labs LLC</li>
-                <li>Location: Silicon Beach, CA</li>
-                <li>Email: wavi.labs@gmail.com</li>
-                <li>Phone: (310) 910-3199</li>
-                <li>Website: wavi-labs.com</li>
-            </ul>
-            <!-- TODO: Add buttons for Twitter, Instagram, GitHub links. -->
-        </section>
+      <div class="columns">
+        <div class="column is-half">
+          <div class="container">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input is-rounded" type="text" placeholder="Your Name">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Website</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-rounded" type="text" placeholder="www.yourwebsite.com" value="">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-rounded" type="email" placeholder="youremail@gmail.com" value="">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Subject</label>
+              <div class="control">
+                <div class="select is-rounded">
+                  <select>
+                    <option>General Question</option>
+                    <option>Custom Application</option>
+                    <option>Formal Verification</option>
+                    <option>Rapid Prototyping</option>
+                    <option>Bot Development</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Your message."></textarea>
+              </div>
+            </div>
+
+            <div class="field is-grouped is-grouped-centered">
+              <div class="control">
+                <button class="button is-primary is-medium is-rounded hvr-grow">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="container">
+            <section class="section has-text-centered">
+              <h1 class="title underlined">Contact Information</h1>
+              <!-- TODO: Add buttons for Twitter, Instagram, GitHub links. -->
+              <ul>
+                  <li><strong>Name:</strong> Wavi Labs LLC</li>
+                  <li><strong>Location:</strong> Silicon Beach, CA</li>
+                  <li><strong>Email:</strong> wavi.labs@gmail.com</li>
+                  <li><strong>Phone:</strong> (310) 910-3199</li>
+                  <li><strong>Website:</strong> wavi-labs.com</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
 
     <br>
