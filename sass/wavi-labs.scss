@@ -1,12 +1,15 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Montserrat&display=swap');
 
 $primary: #48b5e0;
 $secondary: #71eeb8;
 // $navbar-height: 3rem;
 $navbar-item-img-max-height: 3rem;
 // $light: #71eeb8;
-$family-sans-serif: 'Nunito', sans-serif;
+//$family-sans-serif: 'Nunito', sans-serif;
+$family-sans-serif: 'Montserrat', sans-serif;
+$family-monospace: 'Fira Code', monospace;
+
 // $body-background-color: $primary;
 
 // ATTENTION!: Moving this import statement above the variable declarations
@@ -49,6 +52,7 @@ a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
 
 .title {
     color: $primary;
+    font-family: $family-sans-serif;
 }
 
 // CSS above this line can be optimized.
@@ -62,6 +66,7 @@ a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
 
 p {
     color: $dark;
+    font-family: $family-sans-serif;
 }
 
 .navbar {
@@ -82,7 +87,7 @@ p {
 }
 
 .hero-body {
-    background-image: url("/docs/ocean-water.jpg");
+    // background-image: url("/docs/ocean-water.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -210,8 +215,8 @@ p {
 }
 
 .carousel-prev::before {
-    content: '\f053';
-    font-family: "FontAwesome";
+    content: '<-';
+    font-family: $family-monospace;
 }
 
 .carousel-next {
@@ -220,8 +225,8 @@ p {
 }
 
 .carousel-next::before {
-    content: '\f054';
-    font-family: "FontAwesome";
+    content: '->';
+    font-family: $family-monospace;
 }
 
 .carousel-prev:hover,
