@@ -269,62 +269,67 @@
 
         <div class="column is-three-fifths">
           <div class="container">
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="control">
-                <input class="input is-rounded" type="text" placeholder="Your Name">
-              </div>
-            </div>
 
-            <div class="field">
-              <label class="label">Website</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-rounded" type="text" placeholder="www.yourwebsite.com" value="">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
-                </span>
-              </div>
-            </div>
+            <form name="catch-the-wave" method="POST" data-netlify="true">
 
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-rounded" type="email" placeholder="youremail@gmail.com" value="">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label">Subject</label>
-              <div class="control">
-                <div class="select is-rounded">
-                  <select>
-                    <option>General Question</option>
-                    <option>Custom Application</option>
-                    <option>Formal Verification</option>
-                    <option>Rapid Prototyping</option>
-                    <option>Bot Development</option>
-                    <option>Other</option>
-                  </select>
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input class="input is-rounded" type="text" placeholder="Your Name" name="name">
                 </div>
               </div>
-            </div>
 
-            <div class="field">
-              <label class="label">Message</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="Your message."></textarea>
+              <div class="field">
+                <label class="label">Website</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-rounded" type="text" placeholder="www.yourwebsite.com" name="website">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <div class="field is-grouped is-grouped-centered">
-              <div class="control">
-                <button class="button is-primary is-medium is-rounded hvr-grow">Submit</button>
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-rounded" type="email" placeholder="youremail@email.com" name="email">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
               </div>
-            </div>
 
+              <div class="field">
+                <label class="label">Subject</label>
+                <div class="control">
+                  <div class="select is-rounded">
+                    <select name="subject[]">
+                      <option value="general">General Question</option>
+                      <option value="custom-website">Custom Website</option>
+                      <option value="custom-app">Custom Application</option>
+                      <option value="prototyping">Rapid Prototyping</option>
+                      <option value="verification">Formal Verification</option>
+                      <option value="bot-dev">Bot Development</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                  <textarea class="textarea" name="message" placeholder="Your message."></textarea>
+                </div>
+              </div>
+
+              <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                  <button type="submit" class="button is-primary is-medium is-rounded hvr-grow">Submit</button>
+                </div>
+              </div>
+
+            </form>
           </div>
         </div>
 
