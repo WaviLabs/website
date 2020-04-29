@@ -44,7 +44,7 @@ a.animate-hover:after, a.animate-hover:visited:after {
     width: 0%;
     background: $primary;
     transition: 0.2s;
-  }
+}
 
 a.animate-hover:hover:after, a.animate-hover:visited:hover:after {
     width: 100%;
@@ -76,6 +76,10 @@ p {
     padding-right: 2rem;
     padding-bottom: 1rem;
 	padding-left: 2rem;
+}
+
+a.navbar-item:hover {
+    background-color: #fff;
 }
 
 .scrolled {

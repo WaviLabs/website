@@ -7152,6 +7152,9 @@ p {
   padding-bottom: 1rem;
   padding-left: 2rem; }
 
+a.navbar-item:hover {
+  background-color: #fff; }
+
 .scrolled {
   background-color: #fff;
   transition: all .5s ease-in-out;
