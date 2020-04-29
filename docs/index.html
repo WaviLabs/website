@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/a5fd11fb22.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="navbar-fixed-top">
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
@@ -268,7 +268,7 @@
         </div>
 
         <div class="column is-three-fifths">
-          <div class="container">
+          <div class="section">
 
             <form name="catch-the-wave" method="POST" data-netlify="true">
 
@@ -510,6 +510,19 @@
             slideTo(index);
         }
     }, false);
+
+    function hamburgerHelper(){
+      document.querySelector('.navbar-burger').addEventListener("click", toggleNav);
+      function toggleNav() {
+        var nav = document.querySelector('.navbar-menu');
+        if(nav.className == "navbar-menu") {
+            nav.className = "navbar-menu is-active";
+        } else {
+            nav.className = "navbar-menu";
+        }
+      }
+    }
+    hamburgerHelper();
   </script>
 
 </html>

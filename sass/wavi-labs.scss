@@ -6,7 +6,7 @@ $secondary: #71eeb8;
 // $navbar-height: 3rem;
 $navbar-item-img-max-height: 3rem;
 // $light: #71eeb8;
-//$family-sans-serif: 'Nunito', sans-serif;
+// $family-sans-serif: 'Nunito', sans-serif;
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-monospace: 'Fira Code', monospace;
 
@@ -79,7 +79,11 @@ p {
 }
 
 a.navbar-item:hover {
-    background-color: #fff;
+    background-color: white;
+}
+
+.navbar-burger:hover {
+    background-color: white;
 }
 
 .scrolled {

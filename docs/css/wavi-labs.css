@@ -7153,7 +7153,10 @@ p {
   padding-left: 2rem; }
 
 a.navbar-item:hover {
-  background-color: #fff; }
+  background-color: white; }
+
+.navbar-burger:hover {
+  background-color: white; }
 
 .scrolled {
   background-color: #fff;
