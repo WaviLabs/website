@@ -32,6 +32,13 @@ data Project = Project
 
 instance FromDhall Project
 
+data SubjectOpt = SubjectOpt
+    { optName :: Text
+    , value   :: Text
+    } deriving (Generic, Show)
+
+instance FromDhall SubjectOpt
+
 data Config = Config
     { heroContent    :: Text
     -- | Content title and content paragraph
@@ -44,6 +51,7 @@ data Config = Config
     , col1           :: ColSection
     , col2           :: ColSection
     , col3           :: ColSection
+    , subjectOpts    :: [SubjectOpt]
     } deriving (Generic, Show)
 
 instance FromDhall Config

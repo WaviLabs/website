@@ -111,3 +111,4 @@ render Config{..} innerHtml =
             -- | Inner Html goes here
             innerHtml
             myFooter_ footerConfig;
+        script_ script

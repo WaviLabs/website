@@ -6,6 +6,7 @@ import Data.Text
 import Lucid
 import Lucid.Base
 
+
 -- | Attribute Helpers
 aria_label_ :: Text -> Attribute
 aria_label_ value = makeAttribute "aria-label" value
@@ -20,6 +21,12 @@ data_target_ :: Text -> Attribute
 data_target_ value = makeAttribute "data_target" value
 
 -- | HTML Helpers
+i'_ :: Applicative m
+    => Monad m
+    => [Attribute]
+    -> HtmlT m ()
+i'_ attrs = term "i" attrs ""
+
 u_ :: Applicative m
    => Monad m
    => [Attribute]
@@ -39,3 +46,6 @@ container_ :: Applicative m
            => HtmlT m a
            -> HtmlT m a
 container_ inner = div_ [class_ "container"] inner
+
+dataNetifly_ :: Text -> Attribute
+dataNetifly_ value = makeAttribute "data-netifly" value

@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveGeneric #-}
 
-module Page.Contact.Types where
+module Page.Services.Types where
 
 import Dhall
 

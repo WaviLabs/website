@@ -1,7 +1,7 @@
-module Page.Blog.Template where
+module Page.Services.Template where
 
 import Lucid
-import Page.Blog.Types
+import Page.Services.Types
 
 import Data.List (intersperse)
 import Data.Monoid (mconcat)

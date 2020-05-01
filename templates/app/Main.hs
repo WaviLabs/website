@@ -8,12 +8,22 @@ import GHC.Generics (Generic)
 import Lucid (renderTextT)
 
 import qualified Base as Base
-import qualified Data.Text.Lazy.IO as IO
+import qualified Page.Blog as Blog
+import qualified Page.Contact as Contact
 import qualified Page.Home as Home
+import qualified Page.Services as Services
+import qualified Page.Team as Team
+
+import qualified Data.Text.Lazy.IO as IO
+
 
 data Config = Config
-    { baseConfig :: Base.Config
-    , homeConfig :: Home.Config
+    { baseConfig     :: Base.Config
+    , homeConfig     :: Home.Config
+    , servicesConfig :: Services.Config
+    , blogConfig     :: Blog.Config
+    , teamConfig     :: Team.Config
+    , contactConfig  :: Contact.Config
     } deriving (Generic, Show)
 
 instance FromDhall Config
@@ -22,8 +32,24 @@ main :: IO ()
 main = do
     config <- input auto "../config.dhall"
 
-    let wrap = Base.render $ baseConfig config
-        home = Home.render $ homeConfig config
+    let wrap     = Base.render $ baseConfig config
+        home     = Home.render $ homeConfig config
+        services = Services.render $ servicesConfig config
+        blog     = Blog.render $ blogConfig config
+        team     = Team.render $ teamConfig config
+        contact  = Contact.render $ contactConfig config
 
-    text <- renderTextT $ wrap home
-    IO.writeFile "../docs/indexText.html" text
+    homeHtml <- renderTextT $ wrap home
+    IO.writeFile "../docs/indexText.html" homeHtml
+
+    servicesHtml <- renderTextT $ wrap services
+    IO.writeFile "../docs/servicesText.html" servicesHtml
+
+    blogHtml <- renderTextT $ wrap blog
+    IO.writeFile "../docs/blogText.html" blogHtml
+
+    teamHtml <- renderTextT $ wrap team
+    IO.writeFile "../docs/teamText.html" teamHtml
+
+    contactHtml <- renderTextT $ wrap contact
+    IO.writeFile "../docs/contactText.html" contactHtml

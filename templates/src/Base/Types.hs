@@ -32,7 +32,8 @@ data Footer = Footer
 instance FromDhall Footer
 
 data Config = Config
-    { footerConfig :: Footer
+    { script       :: Text
+    , footerConfig :: Footer
     } deriving (Generic, Show)
 
 instance FromDhall Config

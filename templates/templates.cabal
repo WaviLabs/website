@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 98d5fc4857a3ff2d9bd24ab6ca5af452fde9a7c5e382b30c2cc3483736b214b3
+-- hash: 7895062c7b3eb3683fc508317a7838364522a552fb1634b9b9558f63e8815069
 
 name:           templates
 version:        0.1.0.0
@@ -32,12 +32,22 @@ library
       Base.Types
       Basic
       Html
+      Layout
+      Page.Blog
+      Page.Blog.Template
+      Page.Blog.Types
       Page.Contact
       Page.Contact.Template
       Page.Contact.Types
       Page.Home
       Page.Home.Template
       Page.Home.Types
+      Page.Services
+      Page.Services.Template
+      Page.Services.Types
+      Page.Team
+      Page.Team.Template
+      Page.Team.Types
   other-modules:
       Paths_templates
   hs-source-dirs:

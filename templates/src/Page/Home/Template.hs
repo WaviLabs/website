@@ -6,19 +6,14 @@ module Page.Home.Template where
 import Lucid
 import Page.Home.Types
 
+import Data.List (intersperse)
+import Data.Monoid (mconcat)
 import Data.Text (Text)
 import Basic (showT, flipFlop)
-import Html (container_)
+import Html (container_, dataNetifly_, i'_)
 
 import qualified Data.Text as T
 
-
--- Helpers
-i'_ :: Applicative m
-    => Monad m
-    => [Attribute]
-    -> HtmlT m ()
-i'_ attrs = term "i" attrs ""
 
 -- | TODO: Move to Layout.hs
 -- | The middle of the home page. Layout component.
@@ -136,8 +131,14 @@ colSection_ ColSection{..} = do
     figure_ [class_ "image container is-128x128"] $
         img_ [src_ imgSrc, alt_ imgAlt]
     section_ [class_ "section has-text-centered"] $ do
-        h1_ [class_ "title"] $ toHtml colTitle
+        h1_ [class_ "title is-4"] $ processTitle colTitle
         p_ $ toHtml colPara
+  where
+    processTitle :: Monad m
+                 => Applicative m
+                 => Text
+                 -> HtmlT m ()
+    processTitle = mconcat . intersperse (br_ []) . map toHtml . T.words
 
 render :: Applicative m
        => Monad m
@@ -158,6 +159,19 @@ render Config{..} = do
             (colSection_ col1)
             (colSection_ col2)
             (colSection_ col3)
+        div_ [class_ "level"] $ do
+            div_ [class_ "level-left"] ""
+            div_ [class_ "level-right"] $
+                a_ [href_ "#", class_ "button hvr-icon-forward is-medium"] $ do
+                    "Read Our Blog"
+                    i'_ [class_ "fas fa-chevron-right hvr-icon"]
+        container_ $ do
+            section_ [class_ "section has-text-centered"] $
+                h1_ [class_ "title"] "Catch The Wave"
+            div_ [class_ "columns is-centered"] $
+                div_ [class_ "column is-three-fifths"] $
+                    div_ [class_ "section"] $
+                        surveyForm_ "catch-the-wave" subjectOpts
   where
     halfHalfZipper :: Applicative m
                    => Monad m
@@ -181,3 +195,46 @@ render Config{..} = do
 
     uncurrry :: (a -> b -> c -> d) -> (a, b, c) -> d
     uncurrry f = \(x, y, z) -> f x y z
+
+    surveyForm_ :: Applicative m
+                => Monad m
+                => Text
+                -> [SubjectOpt]
+                -> HtmlT m ()
+    surveyForm_ name subOpts =
+            form_ [name_ name, method_ "POST", dataNetifly_ "true"] $ do
+                div_ [class_ "field"] $ do
+                    label_ [class_ "label"] "Name"
+                    div_ [class_ "control"] $
+                        input_ [class_ "input is-rounded", type_ "text", placeholder_ "Your Name", name_ "name"]
+                div_ [class_ "field"] $ do
+                    label_ [class_ "label"] "Website"
+                    div_ [class_ "control has-icons-left has-icons-right"] $ do
+                        input_ [class_ "input is-rounded", type_ "text", placeholder_ "www.yourwebsite.com", name_ "website"]
+                        span_ [class_ "icon is-small is-left"] $
+                            i'_ [class_ "fas fa-user"]
+                div_ [class_ "field"] $ do
+                    label_ [class_ "label"] "Email"
+                    div_ [class_ "control has-icons-left has-icons-right"] $ do
+                        input_ [class_ "input is-rounded", type_ "email", placeholder_ "youremail@email.com", name_ "email"]
+                        span_ [class_ "icon is-small is-left"] $
+                            i'_ [class_ "fas fa-envelope"]
+                div_ [class_ "field"] $ do
+                    label_ [class_ "label"] "Subject"
+                    div_ [class_ "control"] $
+                        div_ [class_ "select is-rounded"] $
+                            select_ [name_ "subject[]"] $
+                                mapM_ subjectOpt_ subOpts
+                div_ [class_ "field"] $ do
+                    label_ [class_ "label"] "Message"
+                    div_ [class_ "control"] $
+                        textarea_ [class_ "textarea", name_ "message", placeholder_ "Your message."] ""
+                div_ [class_ "field is-grouped is-grouped-centered"] $
+                    div_ [class_ "control"] $
+                        button_ [type_ "submit", class_ "button is-primary is-medium is-rounded hvr-grow"] "Submit"
+
+    subjectOpt_ :: Applicative m
+                => Monad m
+                => SubjectOpt
+                -> HtmlT m ()
+    subjectOpt_ SubjectOpt{..} = option_ [value_ value] $ toHtml optName
