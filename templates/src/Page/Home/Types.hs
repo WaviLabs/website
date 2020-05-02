@@ -40,18 +40,20 @@ data SubjectOpt = SubjectOpt
 instance FromDhall SubjectOpt
 
 data Config = Config
-    { heroContent    :: Text
+    { heroContent     :: Text
     -- | Content title and content paragraph
-    , halfSections   :: [HalfSection]
+    , halfSections    :: [HalfSection]
     -- | Image source links
-    , halfImages     :: [Maybe Text]
+    , halfImages      :: [Maybe Text]
     -- | Name of project and link to project
-    , projects       :: [Project]
-    , triColumnTitle :: Text
-    , col1           :: ColSection
-    , col2           :: ColSection
-    , col3           :: ColSection
-    , subjectOpts    :: [SubjectOpt]
+    , projects        :: [Project]
+    , triColumnTitle  :: Text
+    , col1            :: ColSection
+    , col2            :: ColSection
+    , col3            :: ColSection
+    , surveyName      :: Text
+    , surveyOptNames  :: [Text]
+    , surveyOptValues :: [Text]
     } deriving (Generic, Show)
 
 instance FromDhall Config

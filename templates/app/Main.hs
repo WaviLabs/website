@@ -20,9 +20,9 @@ import qualified Data.Text.Lazy.IO as IO
 data Config = Config
     { baseConfig     :: Base.Config
     , homeConfig     :: Home.Config
-    , servicesConfig :: Services.Config
-    , blogConfig     :: Blog.Config
-    , teamConfig     :: Team.Config
+    -- , servicesConfig :: Services.Config
+    -- , blogConfig     :: Blog.Config
+    -- , teamConfig     :: Team.Config
     , contactConfig  :: Contact.Config
     } deriving (Generic, Show)
 
@@ -34,22 +34,22 @@ main = do
 
     let wrap     = Base.render $ baseConfig config
         home     = Home.render $ homeConfig config
-        services = Services.render $ servicesConfig config
-        blog     = Blog.render $ blogConfig config
-        team     = Team.render $ teamConfig config
+        -- services = Services.render $ servicesConfig config
+        -- blog     = Blog.render $ blogConfig config
+        -- team     = Team.render $ teamConfig config
         contact  = Contact.render $ contactConfig config
 
     homeHtml <- renderTextT $ wrap home
-    IO.writeFile "../docs/indexText.html" homeHtml
+    IO.writeFile "../docs/index.html" homeHtml
 
-    servicesHtml <- renderTextT $ wrap services
-    IO.writeFile "../docs/servicesText.html" servicesHtml
+    -- servicesHtml <- renderTextT $ wrap services
+    -- IO.writeFile "../docs/servicesText.html" servicesHtml
 
-    blogHtml <- renderTextT $ wrap blog
-    IO.writeFile "../docs/blogText.html" blogHtml
+    -- blogHtml <- renderTextT $ wrap blog
+    -- IO.writeFile "../docs/blogText.html" blogHtml
 
-    teamHtml <- renderTextT $ wrap team
-    IO.writeFile "../docs/teamText.html" teamHtml
+    -- teamHtml <- renderTextT $ wrap team
+    -- IO.writeFile "../docs/teamText.html" teamHtml
 
     contactHtml <- renderTextT $ wrap contact
-    IO.writeFile "../docs/contactText.html" contactHtml
+    IO.writeFile "../docs/contact.html" contactHtml

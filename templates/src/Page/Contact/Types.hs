@@ -9,6 +9,10 @@ import GHC.Generics (Generic)
 
 
 data Config = Config
+    { surveyName      :: Text
+    , surveyOptNames  :: [Text]
+    , surveyOptValues :: [Text]
+    }
     deriving (Generic, Show)
 
 instance FromDhall Config

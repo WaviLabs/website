@@ -9,6 +9,7 @@ import GHC.Generics (Generic)
 
 
 data Config = Config
-    deriving (Generic, Show)
+    { posts :: [Text]
+    } deriving (Generic, Show)
 
 instance FromDhall Config
