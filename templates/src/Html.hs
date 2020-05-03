@@ -34,18 +34,11 @@ u_ :: Applicative m
    -> HtmlT m a
 u_ attrs inner = term "u" attrs inner
 
-
 script'_ :: Applicative m
          => Monad m
          => [Attribute]
          -> HtmlT m ()
 script'_ attrs = term "script" attrs ""
-
-container_ :: Applicative m
-           => Monad m
-           => HtmlT m a
-           -> HtmlT m a
-container_ inner = div_ [class_ "container"] inner
 
 dataNetifly_ :: Text -> Attribute
 dataNetifly_ value = makeAttribute "data-netifly" value

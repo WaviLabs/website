@@ -10,15 +10,15 @@ import Html
 import Lucid
 import Lucid.Base
 
+import qualified Bulma.Wrapper as Wrapper
 
 -- | Navbar
-
 navbarLogo_ :: Applicative m
             => Monad m
             => HtmlT m ()
 navbarLogo_ =
     a_ [class_ "navbar-item", href_ "index.html"] $
-        img_ [src_ "new-logo.svg.png", alt_ "Wavi Labs logo"]
+        img_ [src_ "images/new-logo.svg.png", alt_ "Wavi Labs logo"]
 
 hamburgerNav_ :: Applicative m
               => Monad m
@@ -48,7 +48,7 @@ navbarMenu_ hrefs inners =
                 (zip hrefs inners)
 
 -- | Footer
--- | TODO: This should be the render func for footer comp.
+-- | TODO: This should be the render func for footer component.
 myFooter_ :: Monad m
           => Applicative m
           => Footer
@@ -101,7 +101,7 @@ render Config{..} innerHtml =
             script'_ [ src_ "https://kit.fontawesome.com/a5fd11fb22.js", crossorigin_ "anonymous"];
         body_ $ do
             nav_ [ class_ "navbar is-fixed-top", role_ "navigation", aria_label_ "main navigation"] $
-                container_ $ do
+                Wrapper.container_ $ do
                     div_ [class_ "navbar-brand"] $ do
                         navbarLogo_
                         hamburgerNav_

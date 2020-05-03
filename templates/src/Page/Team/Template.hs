@@ -7,7 +7,7 @@ import Data.List (intersperse)
 import Data.Monoid (mconcat)
 import Data.Text (Text)
 import Basic (showT, flipFlop)
-import Html (container_, dataNetifly_, i'_)
+import Html (dataNetifly_, i'_)
 
 import qualified Data.Text as T
 

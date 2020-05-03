@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7895062c7b3eb3683fc508317a7838364522a552fb1634b9b9558f63e8815069
+-- hash: 92da583dc80d536818b5ca7396baed68248a1b0934abf064ea221a30248927fa
 
 name:           templates
 version:        0.1.0.0
@@ -56,6 +56,7 @@ library
       base >=4.7 && <5
     , dhall
     , lucid
+    , lucid-lego
     , text
   default-language: Haskell2010
 
@@ -70,6 +71,7 @@ executable templates-exe
       base >=4.7 && <5
     , dhall
     , lucid
+    , lucid-lego
     , templates
     , text
   default-language: Haskell2010
@@ -86,6 +88,7 @@ test-suite templates-test
       base >=4.7 && <5
     , dhall
     , lucid
+    , lucid-lego
     , templates
     , text
   default-language: Haskell2010
