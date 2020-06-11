@@ -33,8 +33,12 @@ render Config{..} = do
 
     -- | List of double columns
     Wrapper.container_ $
-        mapM_
-            DoubleColumn.render
+        mapM
+            (\x -> do
+                DoubleColumn.render x
+                -- TODO: Make repeating break function
+                mapM_ (\_ -> br_ []) [1..2]
+            )
             (map
                 (uncurrry doubleColumnOptsZip)
                 (tripZip (flipFlop True) halfSections halfImages)
@@ -57,8 +61,11 @@ render Config{..} = do
             h1_ [class_ "title"] "Catch The Wave"
         div_ [class_ "columns is-centered"] $
             div_ [class_ "column is-three-fifths"] $
-                div_ [class_ "section"] $
+                Wrapper.container_ $
                     surveyForm_ $ SurveyForm surveyName surveyOptNames surveyOptValues
+
+    br_ []
+    br_ []
   where
     -- | The first element on the home page
     hero_ :: Applicative m
@@ -91,14 +98,15 @@ render Config{..} = do
         levelOpts =
             Level.Options
                 ("") $
-                a_ [href_ "#", class_ "button hvr-icon-forward is-medium"] $ do
+                a_ [href_ "#", class_ "button is-info is-outlined hvr-icon-forward is-medium"] $ do
                     toHtml button
-                    i'_ [class_ "fas fa-chevron-right hvr-icon"]
+                    space
+                    i_ [class_ "fas fa-chevron-right hvr-icon"] ""
 
     halfImage_ :: Applicative m
-                => Monad m
-                => Text
-                -> HtmlT m ()
+               => Monad m
+               => Text
+               -> HtmlT m ()
     halfImage_ src =
         div_ [class_ "column"] $
             img_ [src_ src]
@@ -128,6 +136,7 @@ render Config{..} = do
                         -> DoubleColumn.Options m ()
     doubleColumnOptsZip isRev sec mbImg =
         DoubleColumn.Options
+            (False)
             (True)
             (isRev)
             (halfSection_ sec) $
@@ -147,7 +156,11 @@ render Config{..} = do
     levelOpts :: Applicative m => Monad m => Level.Options m ()
     levelOpts =
         Level.Options
-            "" $
-            a_ [href_ "#", class_ "button hvr-icon-forward is-medium"] $ do
+            "" $ do
+            a_ [href_ "#", class_ "button is-info is-outlined hvr-icon-forward is-medium"] $ do
                 "Read Our Blog"
-                i'_ [class_ "fas fa-chevron-right hvr-icon"]
+                space
+                i_ [class_ "fas fa-chevron-right hvr-icon"] ""
+
+space :: Applicative m => Monad m => HtmlT m ()
+space = "               "

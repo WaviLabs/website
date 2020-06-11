@@ -24,10 +24,20 @@ render :: Applicative m
        => Monad m
        => Config
        -> HtmlT m ()
-render Config{..} = container_ $ DoubleColumn.render doubleColumnConfig
+render Config{..} = container_ $ do
+    br_ []
+    br_ []
+    br_ []
+    br_ []
+    br_ []
+    br_ []
+    DoubleColumn.render doubleColumnConfig
+    br_ []
+    br_ []
   where
     doubleColumnConfig =
         DoubleColumn.Options
+            False
             False
             False
             (Wrapper.container_ $ surveyForm_ $ SurveyForm surveyName surveyOptNames surveyOptValues)

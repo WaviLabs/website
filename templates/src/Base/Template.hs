@@ -59,13 +59,23 @@ myFooter_ Footer{..} =
             div_ [class_ "column is-one-fifths"] $
                 div_ [class_ "container has-text-centered"] $
                     a_ [href_ "#"] $
-                        img_ [src_ "g915.png", alt_ "Wavi Labs logo"]
+                        img_ [src_ "images/g915.png", alt_ "Wavi Labs logo"]
 
             -- | Columns
             footerCol_ col1
             footerCol_ col2
             footerCol_ col3
             footerCol_ col4
+
+        div_ [class_ "content has-text-centered"] $
+            p_ $ do
+                "This website was built by "
+                a_ [href_ "#"] "Wavi Labs"
+                ". Powered by "
+                a_ [href_ "#"] "Lucid"
+                " and "
+                a_ [href_ "#"] "Bulma"
+                "."
 
 footerCol_ :: Applicative m
            => Monad m
