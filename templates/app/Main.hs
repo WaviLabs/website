@@ -53,4 +53,3 @@ main = do
 
     contactHtml <- renderTextT $ wrap contact
     IO.writeFile "../docs/contact.html" contactHtml
-

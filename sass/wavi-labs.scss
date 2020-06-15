@@ -3,6 +3,7 @@
 
 $primary: #48b5e0;
 $secondary: #71eeb8;
+$info: $secondary;
 // $navbar-height: 3rem;
 $navbar-item-img-max-height: 3rem;
 // $light: #71eeb8;
@@ -10,11 +11,12 @@ $navbar-item-img-max-height: 3rem;
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-monospace: 'Fira Code', monospace;
 
-// $body-background-color: $primary;
+// OVERRIDE BULMA!!!!
+// .button.is-info {
+//     color: white !important;
+// }
 
-// ATTENTION!: Moving this import statement above the variable declarations
-// causes problems with the styling for a currently unknown reason.
-@import "../node_modules/bulma/bulma.sass";
+@import "../bulma-0.8.2/bulma.sass";
 
 body {
     font-size: 1.25rem;
@@ -126,23 +128,24 @@ a.navbar-item:hover {
     -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
     border: none;
-  }
-  .hvr-icon-forward .hvr-icon {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-transition-duration: 0.1s;
-    transition-duration: 0.1s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    border: none;
-  }
-  .hvr-icon-forward:hover .hvr-icon, .hvr-icon-forward:focus .hvr-icon, .hvr-icon-forward:active .hvr-icon {
-    -webkit-transform: translateX(4px);
-    transform: translateX(4px);
-    color: $secondary;
-  }
+}
+.hvr-icon-forward .hvr-icon {
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+-webkit-transition-duration: 0.1s;
+transition-duration: 0.1s;
+-webkit-transition-property: transform;
+transition-property: transform;
+-webkit-transition-timing-function: ease-out;
+transition-timing-function: ease-out;
+border: none;
+}
+
+.hvr-icon-forward:hover .hvr-icon, .hvr-icon-forward:focus .hvr-icon, .hvr-icon-forward:active .hvr-icon {
+-webkit-transform: translateX(4px);
+transform: translateX(4px);
+color: $secondary;
+}
 
 .carousel-item > div {
     height: 400px;

@@ -8,15 +8,15 @@ import Data.Text (Text)
 import GHC.Generics (Generic)
 
 
-data Info = Info
-    { title :: Text
+data Event = Event
+    { title   :: Text
     , content :: Text
     } deriving (Generic, Show)
 
-instance FromDhall Info
+instance FromDhall Event
 
 data Config = Config
-    { panels :: [Info]
+    { events :: [Event]
     } deriving (Generic, Show)
 
 instance FromDhall Config
