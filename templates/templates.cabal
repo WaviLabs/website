@@ -54,7 +54,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
-    , dhall
+    , dhall >=1.30
     , lucid
     , lucid-lego
     , text

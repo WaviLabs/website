@@ -61,7 +61,6 @@ myFooter_ Footer{..} =
                     a_ [href_ "#"] $
                         img_ [src_ "images/g915.png", alt_ "Wavi Labs logo"]
 
-            -- | Columns
             footerCol_ col1
             footerCol_ col2
             footerCol_ col3
@@ -118,7 +117,6 @@ render Config{..} innerHtml =
                     navbarMenu_
                         ["index.html", "services.html", "blog.html", "team.html", "contact.html"]
                         ["About", "Services", "Blog", "Team", "Contact"]
-            -- | Inner Html goes here
             innerHtml
             myFooter_ footerConfig;
         script_ script

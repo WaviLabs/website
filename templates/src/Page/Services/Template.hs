@@ -41,5 +41,5 @@ render Config{..} = do
 
     renderEvent :: Monad m => Event -> HtmlT m ()
     renderEvent Event{..} = do
-       h3_ [class_ "subtitle"] $ toHtml title
+       h3_ $ toHtml title
        p_ $ toHtml content
