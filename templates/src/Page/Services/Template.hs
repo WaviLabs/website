@@ -32,14 +32,17 @@ render Config{..} = do
     Wrapper.container_ $ do
        section_ [class_ "section has-text-centered"] $ do
               h1_ [class_ "title"] "Services"
-              p_ "At Wavi Labs we provide a variety of resources ranging from SEO consulting to staff augmentation for your software needs."
+              p_ $ toHtml servicesText
 
-    Timeline.render timelineOpts
+    Wrapper.container_ $ do
+       section_ [class_ "has-text-centered"] $ do
+              h1_ [class_ "title"] "Our Process"
+       Timeline.render timelineOpts
   where
     timelineOpts :: Monad m => Timeline.Options m ()
     timelineOpts = Timeline.Options $ map renderEvent events
 
     renderEvent :: Monad m => Event -> HtmlT m ()
     renderEvent Event{..} = do
-       h3_ $ toHtml title
+       h1_ [class_ "title is-4"] $ toHtml title
        p_ $ toHtml content

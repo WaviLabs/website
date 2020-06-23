@@ -28,10 +28,10 @@ render :: Applicative m
        => Config
        -> HtmlT m ()
 render Config{..} = do
-    -- | Hero
+    -- Hero
     hero_ heroContent
 
-    -- | List of double columns
+    -- List of double columns
     Wrapper.container_ $
         mapM
             (\x -> do
@@ -44,18 +44,18 @@ render Config{..} = do
                 (tripZip (flipFlop True) halfSections halfImages)
             )
 
-    -- | Triple column header
+    -- Triple column header
     Wrapper.container_ $ do
         section_ [class_ "section has-text-centered"] $
             h1_ [class_ "title"] "Why Wavi Labs?"
 
-    -- | Triple column
+    -- Triple column
     Wrapper.container_ $ do
         TripleColumn.render tripleColumnOpts
-        -- | Level after triple column
+        -- Level after triple column
         Level.render levelOpts
 
-    -- | Header for form and form
+    -- Header for form and form
     Wrapper.container_ $ do
         section_ [class_ "section has-text-centered"] $
             h1_ [class_ "title"] "Catch The Wave"
@@ -67,7 +67,7 @@ render Config{..} = do
     br_ []
     br_ []
   where
-    -- | The first element on the home page
+    -- The first element on the home page
     hero_ :: Applicative m
           => Monad m
           => Text

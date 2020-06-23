@@ -2,4 +2,8 @@
 /package-lock.json
 notes.txt
 config/*
-config.dhall
+.sass-cache/
+templates/result
+templates/dist-newstyle/
+templates/dist/
+templates/.stack-work

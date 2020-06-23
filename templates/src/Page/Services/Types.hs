@@ -16,7 +16,8 @@ data Event = Event
 instance FromDhall Event
 
 data Config = Config
-    { events :: [Event]
+    { servicesText :: Text
+    , events :: [Event]
     } deriving (Generic, Show)
 
 instance FromDhall Config
