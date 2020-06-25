@@ -15,9 +15,21 @@ data Event = Event
 
 instance FromDhall Event
 
+data ColSection = ColSection
+    { colTitle  :: Text
+    , colPara   :: Text
+    , imgSrc    :: Text
+    , imgAlt    :: Text
+    } deriving (Generic, Show)
+
+instance FromDhall ColSection
+
 data Config = Config
     { servicesText :: Text
     , events :: [Event]
+    , col1 :: ColSection
+    , col2 :: ColSection
+    , col3 :: ColSection
     } deriving (Generic, Show)
 
 instance FromDhall Config

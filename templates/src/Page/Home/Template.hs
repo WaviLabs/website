@@ -126,7 +126,10 @@ render Config{..} = do
                      => Applicative m
                      => Text
                      -> HtmlT m ()
-        processTitle = mconcat . intersperse (br_ []) . map toHtml . T.words
+        processTitle = mconcat
+                     . intersperse (br_ [])
+                     . map toHtml
+                     . T.words
 
     doubleColumnOptsZip :: Applicative m
                         => Monad m
