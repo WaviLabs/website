@@ -12,39 +12,39 @@ import Data.Text (Text)
 import Basic (showT, flipFlop)
 import Html (dataNetifly_, i'_)
 
-import qualified Bulma.Layout.DoubleColumn as DoubleColumn
-import Bulma.Wrapper as Wrapper
+import qualified Bulma.Layout.DoubleColumns
+import qualified Bulma.Basic
 
 import Layout
 
-import qualified Data.Text as T
+import qualified Data.Text as Text
 
 
 render :: Applicative m
        => Monad m
        => Config
        -> HtmlT m ()
-render Config{..} = container_ $ do
+render Config{..} = Bulma.Basic.container $ do
     br_ []
     br_ []
     br_ []
     br_ []
     br_ []
     br_ []
-    DoubleColumn.render doubleColumnConfig
+    Bulma.Layout.DoubleColumns.render doubleColumnConfig
     br_ []
     br_ []
   where
     doubleColumnConfig =
-        DoubleColumn.Options
+        Bulma.Layout.DoubleColumns.Options
             False
             False
             False
-            (Wrapper.container_ $ surveyForm_ $ SurveyForm surveyName surveyOptNames surveyOptValues)
+            (Bulma.Basic.container $ surveyForm_ $ SurveyForm surveyName surveyOptNames surveyOptValues)
             contactInfo_
 
     contactInfo_ =
-        container_ $
+        Bulma.Basic.container $
             section_ [class_ "section has-text-centered"] $ do
                 h1_ [class_ "title"] "Contact Information"
                 ul_ $ do

@@ -10,7 +10,8 @@ import Html
 import Lucid
 import Lucid.Base
 
-import qualified Bulma.Wrapper as Wrapper
+import qualified Bulma.Basic
+
 
 -- | Navbar
 navbarLogo_ :: Applicative m
@@ -110,7 +111,7 @@ render Config{..} innerHtml =
             script'_ [ src_ "https://kit.fontawesome.com/a5fd11fb22.js", crossorigin_ "anonymous"];
         body_ $ do
             nav_ [ class_ "navbar is-fixed-top", role_ "navigation", aria_label_ "main navigation"] $
-                Wrapper.container_ $ do
+                Bulma.Basic.container $ do
                     div_ [class_ "navbar-brand"] $ do
                         navbarLogo_
                         hamburgerNav_
